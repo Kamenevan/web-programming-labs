@@ -19,3 +19,22 @@ footer {
     font-size: 16pt;
     text-align: right;
 }
+
+a {
+
+}
+
+a:visited {
+    color: lavender;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  background-color: white;  
+}
+
+a:active{
+    color: pink;
+    background: green;
+}
