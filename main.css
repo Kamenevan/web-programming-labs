@@ -10,6 +10,7 @@ header {
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: 0,3s;
 }
 
 footer {
@@ -18,10 +19,11 @@ footer {
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+    transition: 0,3 s;
 }
 
 a{
-    
+
 }
 
 a:visited {
