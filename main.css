@@ -26,7 +26,8 @@ footer {
 }
 
 a{
-
+    color: blue;
+    text-decoration: underline;
 }
 
 a:visited {
@@ -37,9 +38,10 @@ a:hover {
   color: red;
   text-decoration: underline;
   background-color: white;  
+  font-weight: bold;
 }
 
-a:active{
+a:active {
     color: pink;
     background: green;
 }
