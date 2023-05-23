@@ -7,6 +7,7 @@
     <title>Каменева Наталья Анатольевна. Лабораторная 4</title>
     <link rel="stylesheet" href="main.css">
     <style>
+
         main div {
             margin: 20px;
             border: 1px solid;
@@ -50,9 +51,59 @@
             margin-left: 320px;
         }
         footer {
-            position: fixed;
+            background-image: linear-gradient(to right, red, orange, yellow, green,blue,darkblue,purple);
+            color: lightgreen;
+            padding: 10px;
+            font-size: 16pt;
             text-align: right;
-            width: 300px;
+        }
+
+        .div_image {
+            width: 500px;
+            height: 500px;
+            background-image: url("https://c.wallhere.com/photos/73/e0/1440x900_px_Batman_comics-1194465.jpg!d");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .main_cloud_div {
+            border-radius:100px/50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dotted rgb(234, 0, 255);
+            box-shadow: 16px 16px 18px 0px rgba(195, 0, 255, 0.514);
+            color: rgb(252, 252, 252);
+            background: linear-gradient(90deg, rgb(30, 2, 190) 0%, rgb(73, 4, 94) 100%);
+        }
+
+        .cloud_div1 {
+            width: 25px;
+            height: 12px;
+            top: 80px;
+            left: 150px;
+        }
+
+        .cloud_div2 {
+            width: 50px;
+            height: 25px;
+            top: 50px;
+            left: 170px;
+        }
+
+        .cloud_div3 {
+            width: 100px;
+            height: 50px;
+            top: 0px;
+            left: 220px;
+        }
+
+        .cloud_div4 {
+            width: 150px;
+            height: 75px;
+            top: -80px;
+            left: 320px;
         }
     </style>
 </head>
@@ -113,10 +164,16 @@
             не делает сплиты? Что андеррайтеры называют красной селёдкой и чем они похожи на организаторов 
             концерта Стаса Михайлова? Все эти тайны будут раскрыты.
         </div>
+        <section class="div_image">
+            <section class="main_cloud_div cloud_div1"></section>
+            <section class="main_cloud_div cloud_div2"></section>
+            <section class="main_cloud_div cloud_div3"></section>
+            <section class="main_cloud_div cloud_div4">Я не сдаюсь!</section>
+        </section>
     </main>
 
     <footer>
-        &copy; Наталья Каменева, ФБИ-13, 2 курс, 2023 
+        &copy; Наталья Каменева, ФБИ-13, 2 курс, 2023
 
     </footer>
 </body>
