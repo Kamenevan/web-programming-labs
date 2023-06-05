@@ -79,6 +79,14 @@
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
         }
+
+    </script>
+    <script>
+
+        function hide(round) {
+            round.style.display = 'none';
+        }
+        
     </script>
     <style> 
     .message {
@@ -91,7 +99,8 @@
         width: 203px;
         height: 25px;
         background: linear-gradient(rgb(205, 205, 240), rgb(141, 141, 245));
-    }    
+    }  
+
     #output {
         border: 1px solid;
         width: 300px;
@@ -108,6 +117,71 @@
         height: 220px;
         background: linear-gradient(rgb(205, 205, 240), rgb(141, 141, 245));
     }
+
+    .round{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    bottom: 100px;
+    margin-left: 500px;
+}
+
+#c1{
+    background-color: red;
+    left: 0;
+}
+
+#c2{
+    background-color: orange;
+    left: 60px;
+}
+
+#c3{
+    background-color: yellow;
+    left: 120px;
+}
+
+#c4{
+    background-color: green;
+    left: 180px;
+}
+
+#c5{
+    background-color: rgb(60, 122, 149);
+    left: 240px;
+}
+
+#c6{
+    background-color: rgb(14, 4, 121);
+    left: 300px;
+}
+
+#c7{
+    background-color: blueviolet;
+    left: 360px;
+}
+
+#c8{
+    background-color: rgb(128, 0, 0);
+    left: 420px;
+}
+
+#c9{
+    background-color: rgb(224, 176, 255);
+    left: 480px;
+}
+
+#c10{
+    background-color: antiquewhite;
+    left: 540px;
+}
     </style>
 </head>
 
@@ -153,8 +227,21 @@
             <input type="button" value="Рассчитать" onclick="Fruits()"><br>
             <div id = 'itog'>Итоговая сумма: 0 &#8381;</div>
         </div>
+        <div class="round" type="button" id="c1" onclick="hide(this)">1</div>
+        <div class="round" type="button" id="c2" onclick="hide(this)">2</div>
+        <div class="round" type="button" id="c3" onclick="hide(this)">3</div>
+        <div class="round" type="button" id="c4" onclick="hide(this)">4</div>
+        <div class="round" type="button" id="c5" onclick="hide(this)">5</div>
+        <div class="round" type="button" id="c6" onclick="hide(this)">6</div>
+        <div class="round" type="button" id="c7" onclick="hide(this)">7</div>
+        <div class="round" type="button" id="c8" onclick="hide(this)">8</div>
+        <div class="round" type="button" id="c9" onclick="hide(this)">9</div>
+        <div class="round" type="button" id="c10" onclick="hide(this)">10</div>
+
+
 
     </main>
+    
 
     <footer onclick="showAuthor()">
         &copy; Наталья Каменева, ФБИ-13, 2 курс, 2023 
