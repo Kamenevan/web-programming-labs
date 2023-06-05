@@ -53,6 +53,16 @@
              color: blueviolet;
              top: 400px;
          }
+         .shi{
+             width: 100px;
+             height: 100px;
+             cursor: grab;
+             background-color: palevioletred;
+             text-align: center;
+             margin-top: 300px;
+             border: 3px solid plum;
+         }
+         
         
     </style>
 
@@ -169,6 +179,24 @@
             }
         }
 
+        function move(div){
+            if(div.style.left == 0 + 'px') {
+                div.style.left = 1650 + 'px';
+                div.style.transform = 'rotate(4turn)';
+            }
+            else{
+                div.style.left = 0 + 'px';
+                div.style.transform = 'rotate(0turn)';
+            }
+        }
+        function wide(div){
+            if(div.style.width == 1000 + 'px') {
+                div.style.width = 100 + 'px';
+            }
+            else{
+                div.style.width = div.offsetWidth + 50 + 'px';
+            }
+        }
     </script>
 </head>
 
@@ -233,6 +261,8 @@
         <div id="clickme" onclick="clickme()">
             Щёлкни меня
         </div>
+
+        <div class= "shi" onclick="wide(this)"></div>
 </main>
     
 <footer>
