@@ -27,6 +27,16 @@
             border-radius: 15px;
             background-color: lightgreen;
         }
+        .color {
+            color: black;
+            border: 1px solid;
+            margin: 50px;
+            text-align: center;
+            width: 300px;
+            padding: 10px;
+            background-color: yellow;
+            cursor: pointer;
+        }
         
     </style>
 
@@ -95,6 +105,42 @@
             rules[0].style.display = 'block';
         }
 
+
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color = 'blue';
+                document.getElementById('color-name').innerHTML = 'Красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                document.getElementById('color-name').innerHTML = 'Черный';
+            }
+
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'green';
+                div.style.color = 'red'
+                document.getElementById('color-name').innerHTML = 'Зелёный';
+            }
+
+            else if (div.style.backgroundColor == 'green') {
+                div.style.backgroundColor = 'purple';
+                div.style.color = 'black'
+                document.getElementById('color-name').innerHTML = 'Фиолетовый';
+            }
+
+            else if (div.style.backgroundColor == 'purple') {
+                div.style.backgroundColor = 'blue';
+                div.style.color = 'red'
+                document.getElementById('color-name').innerHTML = 'Синий';
+            }
+            
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'Жёлтый';
+            }
+        }
+
     </script>
 </head>
 
@@ -137,10 +183,9 @@
     </div>
     <div class="rules">
         <button onclick="show_rules()">Показать правила игры</button>
-        </div>
-        <div class="rules" style="display: none;">
+    </div>
+    <div class="rules" style="display: none;">
         <button onclick="hide_rules">Скрыть правила игры</button>
-
         <div>
             <ol type="I">
                 <li>Сначала нажмите на кнопку "Сыграть в игру"</li>
@@ -149,9 +194,15 @@
                 <li>Если загаданное число больше, попробуйте выбрать число больше предыдущего. Если загаданное число меньше, выберите меньшее</li>
                 <li>Пробуйте угадывать,  пока не одержите победу</li>
             </ol>
-    </div>
+        </div>
+        </div>
+        
+        <div class="color" ondblclick="changecolor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
 </main>
-
+    
 <footer>
     &copy; Наталья Каменева, ФБИ-13, 2 курс, 2023 
 </footer>
