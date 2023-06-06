@@ -37,3 +37,10 @@ function showDaysCount() {
     daysCount = Math.floor (daysCount);
     document.getElementById('dt').innerHTML = 'количество дней с даты рождения:' + daysCount;
 }
+
+function showTime() {
+let today = new Date();
+let currentTime = today.toLocaleTimeString('ru-RU');
+document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime,1000);
