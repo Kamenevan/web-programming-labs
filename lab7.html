@@ -77,6 +77,37 @@
             table.appendChild(tab);
         }
     }
+
+    function kursValut() {
+        let kurs = [48.67, 49.39, 49.05, 49.24, 48.94, 48.67, 50.23, 49.77, 49.86,]
+        let data = ["23.05.2023", "24.05.2023", "25.05.2023", "26.05.2023", "29.05.2023", "30.05.2023", "31.05.2023", "01.06.2023", "02.06.2023",];
+        let dif = ["-", kurs[1]-kurs[0], kurs[2]-kurs[1], kurs[3]-kurs[2], kurs[4]-kurs[3],kurs[5]-kurs[4], kurs[6]-kurs[5], kurs[7]-kurs[6], kurs[8]-kurs[7], kurs[9]-kurs[8], ];
+        let table = document.getElementById("tableValut")
+            for(let i = 0; i < kurs.length; i++) {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                td1.innerHTML = kurs[i];
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                td2.innerHTML = data[i];
+                td3.innerHTML = dif[i];
+                table.appendChild(tr);
+            }
+        let sum = 0;
+        let average = document.getElementById("average");
+        let max = document.getElementById("max");
+        let min = document.getElementById("min");
+            for(i = 0; i < kurs.length; i++) {
+                sum = sum + kurs[i];
+            }
+        let sumAll = sum / kurs.length;
+        average.innerHTML = "Среднее значение: " + sumAll;
+        max.innerHTML = "Максимальное значение: " + Math.max.apply(0, kurs);
+        min.innerHTML = "Минимальное значение: " + Math.min.apply(0, kurs);
+    }
     </script>
     
 </head>
@@ -103,6 +134,13 @@
 
     <button onclick="tablekd()">Таблица умножения на 76</button>
     <div id="table"></div>
+
+    <button onclick="kursValut()">Курс Акций "Селигдар"</button>
+        <table border="1" id="tableValut"></table>
+        <div id="detailValut"></div>
+        <div id="average"></div>
+        <div id="max"></div>
+        <div id="min"></div>
 </main>
     
 <footer>
